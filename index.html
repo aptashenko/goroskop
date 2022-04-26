@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;900&family=Montserrat:wght@400;500;700;900&family=Raleway:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <title>НОВЫЙ ГОРОСКОП НА 2021 ГОД!</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <header class="header__title">НОВЫЙ ГОРОСКОП НА 2021 ГОД!</header>
+            <p class="header__subtitle">Узнайте, что Вас ждёт.</p>
+        </div>
+    </header>
+    <main class="hero" hidden>
+        <div class="hero__container">
+            <div class="hero__background">
+                <img src="./images/svg/zodiac_circle.svg" alt="Зодиакальный круг" class="hero__circle">
+            </div>
+            <h2 class="hero__title">Узнайте, как 2021 год изменит жизнь каждого из нас!</h2>
+            <p class="hero__text">К сожалению, 2020 год принес нам немало неприятностей, даже откровенных проблем и несчастий. Не
+                смотря на это, 3 знака зодиака очень скоро обретут долгожданное счастье! 2021 год затронет своими потрясениями
+                каждого из нас.</p>
+        </div>
+    </main>
+    <section class="quiz">
+        <div class="quiz__container">
+            <form action="" class="quiz__form">
+                <div class="quiz__questionOne" hidden>
+                    <p class="quiz__title">Укажите свой пол:</p>
+                    <div class="quiz__answer">
+                        <label class="quiz__label"><input type="radio" value="woman" name="gender" class="quiz__input">Женщина</label>
+                        <label class="quiz__label"><input type="radio" value="man" name="gender" class="quiz__input">Мужчина</label>
+                    </div>
+                    <button type="submit" class="quiz__button quiz__button--hidden">ДАЛЕЕ</button>
+                </div>
+                <div class="quiz__questionTwo" hidden>
+                    <div class="quiz__progress"></div>
+                    <p class="quiz__title">В какое время суток Вы чувствуете себя наиболее комфортно?</p>
+                    <div class="quiz__answer quiz__answer--column">
+                        <label class="quiz__label quiz__label--column"><input type="radio" value="morning" name="comfort" class="quiz__input">Утро</label>
+                        <label class="quiz__label quiz__label--column"><input type="radio" value="night" name="comfort" class="quiz__input">Ночь</label>
+                        <label class="quiz__label quiz__label--column"><input type="radio" value="evening" name="comfort" class="quiz__input">Вечер</label>
+                        <label class="quiz__label quiz__label--column"><input type="radio" value="day" name="comfort" class="quiz__input">День</label>
+                    </div>
+                    <button type="submit" class="quiz__button quiz__button--hidden">ДАЛЕЕ</button>
+                </div>
+                <div class="quiz__questionThree" hidden>
+                    <div class="quiz__progress quiz__progress--three"></div>
+                    <p class="quiz__title">Подскажите, мучает ли Вас бессонница последнее время?</p>
+                    <div class="quiz__answer quiz__answer--column">
+                        <label class="quiz__label quiz__label--column"><input type="radio" value="yes" name="insomnia" class="quiz__input">Да</label>
+                        <label class="quiz__label quiz__label--column"><input type="radio" value="no" name="insomnia" class="quiz__input">Нет</label>
+                        <label class="quiz__label quiz__label--column"><input type="radio" value="sometimes" name="insomnia" class="quiz__input">Иногда</label>
+                    </div>
+                    <button type="submit" class="quiz__button quiz__button--hidden">ДАЛЕЕ</button>
+                </div>
+                <div class="quiz__questionFour" hidden>
+                    <div class="quiz__progress quiz__progress--four"></div>
+                    <p class="quiz__title">Чувствуете ли Вы в последнее время, что вам никак не удается осуществить ваши планы?</p>
+                    <div class="quiz__answer quiz__answer--column">
+                        <label class="quiz__label quiz__label--column"><input type="radio" name="plans" value="yes" class="quiz__input">Да</label>
+                        <label class="quiz__label quiz__label--column"><input type="radio" name="plans" value="no" class="quiz__input">Нет</label>
+                        <label class="quiz__label quiz__label--column"><input type="radio" name="plans" value="sometimes" class="quiz__input">Иногда</label>
+                    </div>
+                    <button type="submit" class="quiz__button quiz__button--hidden">ДАЛЕЕ</button>
+                </div>
+                <div class="quiz__questionFive">
+                    <div class="quiz__progress quiz__progress--five"></div>
+                    <p class="quiz__title">Какой Вы видите свою жизнь через 5 лет?</p>
+                    <div class="quiz__answer quiz__answer--column">
+                        <label class="quiz__label quiz__label--column"><input type="radio" name="future" value="family" class="quiz__input">Брак, семья, дети, дом</label>
+                        <label class="quiz__label quiz__label--column"><input type="radio" name="future" value="traveling" class="quiz__input">Путешествия по Миру</label>
+                        <label class="quiz__label quiz__label--column"><input type="radio" name="future" value="career" class="quiz__input">Успешная карьера</label>
+                        <label class="quiz__label quiz__label--column"><input type="radio" name="future" value="all" class="quiz__input">Всё вместе</label>
+                    </div>
+                    <button type="submit" class="quiz__button quiz__button--hidden">ДАЛЕЕ</button>
+                </div>
+                <div class="quiz__questionSix" hidden>
+                    <p class="quiz__title">Введите дату своего рождения:</p>
+                    <div class="quiz__answer">
+                        <select name="select" id="" class="quiz__dayBirth">
+                            <option value="" class="quiz__birthOption" selected>День</option>
+                            <option value="" class="quiz__birthOption">1</option>
+                            <option value="" class="quiz__birthOption">2</option>
+                            <option value="" class="quiz__birthOption">3</option>
+                            <option value="" class="quiz__birthOption">4</option>
+                            <option value="" class="quiz__birthOption">5</option>
+                            <option value="" class="quiz__birthOption">6</option>
+                            <option value="" class="quiz__birthOption">7</option>
+                            <option value="" class="quiz__birthOption">8</option>
+                            <option value="" class="quiz__birthOption">9</option>
+                            <option value="" class="quiz__birthOption">10</option>
+                            <option value="" class="quiz__birthOption">11</option>
+                            <option value="" class="quiz__birthOption">12</option>
+                            <option value="" class="quiz__birthOption">13</option>
+                            <option value="" class="quiz__birthOption">14</option>
+                            <option value="" class="quiz__birthOption">15</option>
+                            <option value="" class="quiz__birthOption">16</option>
+                            <option value="" class="quiz__birthOption">17</option>
+                            <option value="" class="quiz__birthOption">18</option>
+                            <option value="" class="quiz__birthOption">19</option>
+                            <option value="" class="quiz__birthOption">20</option>
+                            <option value="" class="quiz__birthOption">21</option>
+                            <option value="" class="quiz__birthOption">22</option>
+                            <option value="" class="quiz__birthOption">23</option>
+                            <option value="" class="quiz__birthOption">24</option>
+                            <option value="" class="quiz__birthOption">25</option>
+                            <option value="" class="quiz__birthOption">26</option>
+                            <option value="" class="quiz__birthOption">27</option>
+                            <option value="" class="quiz__birthOption">28</option>
+                            <option value="" class="quiz__birthOption">29</option>
+                            <option value="" class="quiz__birthOption">30</option>
+                            <option value="" class="quiz__birthOption">31</option>
+                        </select>
+                        <select name="select" id="" class="quiz__monthBirth">
+                            <option value="" class="quiz__birthOption" selected>Месяц</option>
+                            <option value="" class="quiz__birthOption">Январь</option>
+                            <option value="" class="quiz__birthOption">Февраль</option>
+                            <option value="" class="quiz__birthOption">Март</option>
+                            <option value="" class="quiz__birthOption">Апрель</option>
+                            <option value="" class="quiz__birthOption">Май</option>
+                            <option value="" class="quiz__birthOption">Июнь</option>
+                            <option value="" class="quiz__birthOption">Июль</option>
+                            <option value="" class="quiz__birthOption">Август</option>
+                            <option value="" class="quiz__birthOption">Сентябрь</option>
+                            <option value="" class="quiz__birthOption">Октябрь</option>
+                            <option value="" class="quiz__birthOption">Ноябрь</option>
+                            <option value="" class="quiz__birthOption">Декабрь</option>
+                        </select>
+                        <select name="select" id="" class="quiz__yearBirth">
+                            <option value="" class="quiz__birthOption" selected>Год</option>
+                            <option value="" class="quiz__birthOption">1980</option>
+                            <option value="" class="quiz__birthOption">1981</option>
+                            <option value="" class="quiz__birthOption">1982</option>
+                            <option value="" class="quiz__birthOption">1983</option>
+                            <option value="" class="quiz__birthOption">1984</option>
+                            <option value="" class="quiz__birthOption">1985</option>
+                            <option value="" class="quiz__birthOption">1986</option>
+                            <option value="" class="quiz__birthOption">1987</option>
+                            <option value="" class="quiz__birthOption">1988</option>
+                            <option value="" class="quiz__birthOption">1989</option>
+                            <option value="" class="quiz__birthOption">1990</option>
+                            <option value="" class="quiz__birthOption">1991</option>
+                            <option value="" class="quiz__birthOption">1992</option>
+                            <option value="" class="quiz__birthOption">1993</option>
+                            <option value="" class="quiz__birthOption">1994</option>
+                            <option value="" class="quiz__birthOption">1995</option>
+                            <option value="" class="quiz__birthOption">1996</option>
+                            <option value="" class="quiz__birthOption">1997</option>
+                            <option value="" class="quiz__birthOption">1998</option>
+                            <option value="" class="quiz__birthOption">1999</option>
+                            <option value="" class="quiz__birthOption">2000</option>
+                            <option value="" class="quiz__birthOption">2001</option>
+                            <option value="" class="quiz__birthOption">2002</option>
+                            <option value="" class="quiz__birthOption">2003</option>
+                            <option value="" class="quiz__birthOption">2004</option>
+                        </select>
+                    </div>
+                    <button type="submit">ДАЛЕЕ</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">2020 © horoscop personal</p>
+        </div>
+    </footer>
+    <script src="./js/script.js" type="module"></script>
+</body>
+</html>

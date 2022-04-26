@@ -1,0 +1,262 @@
+.header {
+    background-color: $blueColor;
+    color: #AFDCE5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+    &__container {
+        @extend %container;
+        padding: 13px 20px;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 0.94;
+    }
+
+    &__subtitle {
+        margin-top: 5px;
+        margin-bottom: 0;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 0.94;
+    }
+}
+
+.hero {
+    padding-top: 10px;
+
+    &__container {
+        @extend %container;
+    }
+
+    &__background {
+        background-image: url('../images/background.jpg');
+        background-size: contain;
+    }
+
+    &__title {
+        margin-top: 10px;
+
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 1.29;
+        color: $blueColor;
+    }
+
+    &__text {
+        margin-top: 10px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.36;
+        color: $blackColor;
+    }
+
+    &__circle {
+        transition: all 20s linear;
+        transform: rotate(0deg);
+        animation: move 20s infinite linear;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.quiz {
+    padding-top: 15px;
+
+    &__container {
+        @extend %container;
+    }
+
+    &__progress {
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 25px;
+
+        width: 100%;
+        height: 8px;
+        background-color: #F3F4F8;
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 8px;
+            width: 26px;
+            top: 0;
+            left: 0;
+            background-color: #B53E42;
+        }
+
+        &--three::before {
+            content: '';
+            position: absolute;
+            height: 8px;
+            width: 67px;
+            top: 0;
+            left: 0;
+            background-color: #B53E42;
+        }
+
+        &--four::before {
+            content: '';
+            position: absolute;
+            height: 8px;
+            width: 131px;
+            top: 0;
+            left: 0;
+            background-color: #B53E42;
+        }
+
+        &--five::before {
+            content: '';
+            position: absolute;
+            height: 8px;
+            width: 194px;
+            top: 0;
+            left: 0;
+            background-color: #B53E42;
+        }
+    }
+
+    &__title {
+        padding: 15px 22px;
+        background-color: $blackColor;
+        color: #ffffff;
+        text-align: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.57;
+    }
+
+    &__answer {
+        display: flex;
+        justify-content: space-around;
+
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        background-color: $grayColor;
+
+        &--column {
+            flex-direction: column;
+            padding-top: 45px;
+            padding-bottom: 53px;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.57;
+        
+        &--column {
+            padding-left: 17px;
+        }
+
+        &--column:nth-last-child(n+2) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__label--active {
+        color: $blueColor;
+        font-weight: 700;
+    }
+
+    &__input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: relative;
+
+        margin-right: 5px;
+
+        width: 16px;
+        height: 16px;
+        
+        border-radius: 100%;
+        outline: none;
+        border: 1px solid #D6D6D6;
+        background-color: #ffffff;
+
+        &:checked::before {
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            top: 50%;
+            left: 50%;
+            border-radius: 100%;
+            background-color: $blackColor;
+            transform: translate(-50%, -50%);
+        }
+
+        &:checked + .quiz__label {
+            color: $blueColor;
+        }
+    }
+
+    &__button {
+        display: block;
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 70px;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.57;
+
+        color: #ffffff;
+        background-color: $blueColor;
+        border: none;
+
+        &:active {
+            background-color: #355ADF;
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        &--hidden {
+            display: none;
+        }
+    }
+}
+
+.footer {
+    &__container {
+        @extend %container;
+    }
+
+    &__text {
+        margin-top: 10px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 2.22;
+        text-align: center;
+        color: #D6D6D6;
+    }
+}
