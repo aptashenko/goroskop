@@ -33,15 +33,14 @@
     <section class="quiz">
         <div class="quiz__container">
             <form action="" class="quiz__form">
-                <div class="quiz__questionOne" hidden>
+                <!-- <div class="quiz__question isActive">
                     <p class="quiz__title">Укажите свой пол:</p>
                     <div class="quiz__answer">
                         <label class="quiz__label"><input type="radio" value="woman" name="gender" class="quiz__input">Женщина</label>
                         <label class="quiz__label"><input type="radio" value="man" name="gender" class="quiz__input">Мужчина</label>
                     </div>
-                    <button type="submit" class="quiz__button quiz__button--hidden">ДАЛЕЕ</button>
                 </div>
-                <div class="quiz__questionTwo" hidden>
+                <div class="quiz__question">
                     <div class="quiz__progress"></div>
                     <p class="quiz__title">В какое время суток Вы чувствуете себя наиболее комфортно?</p>
                     <div class="quiz__answer quiz__answer--column">
@@ -50,9 +49,8 @@
                         <label class="quiz__label quiz__label--column"><input type="radio" value="evening" name="comfort" class="quiz__input">Вечер</label>
                         <label class="quiz__label quiz__label--column"><input type="radio" value="day" name="comfort" class="quiz__input">День</label>
                     </div>
-                    <button type="submit" class="quiz__button quiz__button--hidden">ДАЛЕЕ</button>
                 </div>
-                <div class="quiz__questionThree" hidden>
+                <div class="quiz__question">
                     <div class="quiz__progress quiz__progress--three"></div>
                     <p class="quiz__title">Подскажите, мучает ли Вас бессонница последнее время?</p>
                     <div class="quiz__answer quiz__answer--column">
@@ -60,9 +58,8 @@
                         <label class="quiz__label quiz__label--column"><input type="radio" value="no" name="insomnia" class="quiz__input">Нет</label>
                         <label class="quiz__label quiz__label--column"><input type="radio" value="sometimes" name="insomnia" class="quiz__input">Иногда</label>
                     </div>
-                    <button type="submit" class="quiz__button quiz__button--hidden">ДАЛЕЕ</button>
                 </div>
-                <div class="quiz__questionFour" hidden>
+                <div class="quiz__question">
                     <div class="quiz__progress quiz__progress--four"></div>
                     <p class="quiz__title">Чувствуете ли Вы в последнее время, что вам никак не удается осуществить ваши планы?</p>
                     <div class="quiz__answer quiz__answer--column">
@@ -70,9 +67,8 @@
                         <label class="quiz__label quiz__label--column"><input type="radio" name="plans" value="no" class="quiz__input">Нет</label>
                         <label class="quiz__label quiz__label--column"><input type="radio" name="plans" value="sometimes" class="quiz__input">Иногда</label>
                     </div>
-                    <button type="submit" class="quiz__button quiz__button--hidden">ДАЛЕЕ</button>
                 </div>
-                <div class="quiz__questionFive">
+                <div class="quiz__question">
                     <div class="quiz__progress quiz__progress--five"></div>
                     <p class="quiz__title">Какой Вы видите свою жизнь через 5 лет?</p>
                     <div class="quiz__answer quiz__answer--column">
@@ -81,91 +77,92 @@
                         <label class="quiz__label quiz__label--column"><input type="radio" name="future" value="career" class="quiz__input">Успешная карьера</label>
                         <label class="quiz__label quiz__label--column"><input type="radio" name="future" value="all" class="quiz__input">Всё вместе</label>
                     </div>
-                    <button type="submit" class="quiz__button quiz__button--hidden">ДАЛЕЕ</button>
-                </div>
-                <div class="quiz__questionSix" hidden>
+                </div> -->
+                <div class="quiz__question">
+                    <div class="quiz__progress quiz__progress--six"></div>
                     <p class="quiz__title">Введите дату своего рождения:</p>
-                    <div class="quiz__answer">
-                        <select name="select" id="" class="quiz__dayBirth">
-                            <option value="" class="quiz__birthOption" selected>День</option>
-                            <option value="" class="quiz__birthOption">1</option>
-                            <option value="" class="quiz__birthOption">2</option>
-                            <option value="" class="quiz__birthOption">3</option>
-                            <option value="" class="quiz__birthOption">4</option>
-                            <option value="" class="quiz__birthOption">5</option>
-                            <option value="" class="quiz__birthOption">6</option>
-                            <option value="" class="quiz__birthOption">7</option>
-                            <option value="" class="quiz__birthOption">8</option>
-                            <option value="" class="quiz__birthOption">9</option>
-                            <option value="" class="quiz__birthOption">10</option>
-                            <option value="" class="quiz__birthOption">11</option>
-                            <option value="" class="quiz__birthOption">12</option>
-                            <option value="" class="quiz__birthOption">13</option>
-                            <option value="" class="quiz__birthOption">14</option>
-                            <option value="" class="quiz__birthOption">15</option>
-                            <option value="" class="quiz__birthOption">16</option>
-                            <option value="" class="quiz__birthOption">17</option>
-                            <option value="" class="quiz__birthOption">18</option>
-                            <option value="" class="quiz__birthOption">19</option>
-                            <option value="" class="quiz__birthOption">20</option>
-                            <option value="" class="quiz__birthOption">21</option>
-                            <option value="" class="quiz__birthOption">22</option>
-                            <option value="" class="quiz__birthOption">23</option>
-                            <option value="" class="quiz__birthOption">24</option>
-                            <option value="" class="quiz__birthOption">25</option>
-                            <option value="" class="quiz__birthOption">26</option>
-                            <option value="" class="quiz__birthOption">27</option>
-                            <option value="" class="quiz__birthOption">28</option>
-                            <option value="" class="quiz__birthOption">29</option>
-                            <option value="" class="quiz__birthOption">30</option>
-                            <option value="" class="quiz__birthOption">31</option>
+                    <div class="quiz__answer quiz__answer--date">
+                        <select name="select" class="quiz__days">
+                            <option value="null" class="quiz__day">День</option>
+                            <option value="1" class="quiz__day">01</option>
+                            <option value="2" class="quiz__day">02</option>
+                            <option value="3" class="quiz__day">03</option>
+                            <option value="4" class="quiz__day">04</option>
+                            <option value="5" class="quiz__day">05</option>
+                            <option value="6" class="quiz__day">06</option>
+                            <option value="7" class="quiz__day">07</option>
+                            <option value="8" class="quiz__day">08</option>
+                            <option value="9" class="quiz__day">09</option>
+                            <option value="10" class="quiz__day">10</option>
+                            <option value="11" class="quiz__day">11</option>
+                            <option value="12" class="quiz__day">12</option>
+                            <option value="13" class="quiz__day">13</option>
+                            <option value="14" class="quiz__day">14</option>
+                            <option value="15" class="quiz__day">15</option>
+                            <option value="16" class="quiz__day">16</option>
+                            <option value="17" class="quiz__day">17</option>
+                            <option value="18" class="quiz__day">18</option>
+                            <option value="19" class="quiz__day">19</option>
+                            <option value="20" class="quiz__day">20</option>
+                            <option value="21" class="quiz__day">21</option>
+                            <option value="22" class="quiz__day">22</option>
+                            <option value="23" class="quiz__day">23</option>
+                            <option value="24" class="quiz__day">24</option>
+                            <option value="25" class="quiz__day">25</option>
+                            <option value="26" class="quiz__day">26</option>
+                            <option value="27" class="quiz__day">27</option>
+                            <option value="28" class="quiz__day">28</option>
+                            <option value="29" class="quiz__day">29</option>
+                            <option value="30" class="quiz__day">30</option>
+                            <option value="31" class="quiz__day">31</option>
                         </select>
-                        <select name="select" id="" class="quiz__monthBirth">
-                            <option value="" class="quiz__birthOption" selected>Месяц</option>
-                            <option value="" class="quiz__birthOption">Январь</option>
-                            <option value="" class="quiz__birthOption">Февраль</option>
-                            <option value="" class="quiz__birthOption">Март</option>
-                            <option value="" class="quiz__birthOption">Апрель</option>
-                            <option value="" class="quiz__birthOption">Май</option>
-                            <option value="" class="quiz__birthOption">Июнь</option>
-                            <option value="" class="quiz__birthOption">Июль</option>
-                            <option value="" class="quiz__birthOption">Август</option>
-                            <option value="" class="quiz__birthOption">Сентябрь</option>
-                            <option value="" class="quiz__birthOption">Октябрь</option>
-                            <option value="" class="quiz__birthOption">Ноябрь</option>
-                            <option value="" class="quiz__birthOption">Декабрь</option>
+                        <select name="select" class="quiz__monthes">
+                            <option value="null" class="quiz__month">Месяц</option>
+                            <option value="1" class="quiz__month">01</option>
+                            <option value="2" class="quiz__month">02</option>
+                            <option value="3" class="quiz__month">03</option>
+                            <option value="4" class="quiz__month">04</option>
+                            <option value="5" class="quiz__month">05</option>
+                            <option value="6" class="quiz__month">06</option>
+                            <option value="7" class="quiz__month">07</option>
+                            <option value="8" class="quiz__month">08</option>
+                            <option value="9" class="quiz__month">09</option>
+                            <option value="10" class="quiz__month">10</option>
+                            <option value="11" class="quiz__month">11</option>
+                            <option value="12" class="quiz__month">12</option>
                         </select>
-                        <select name="select" id="" class="quiz__yearBirth">
-                            <option value="" class="quiz__birthOption" selected>Год</option>
-                            <option value="" class="quiz__birthOption">1980</option>
-                            <option value="" class="quiz__birthOption">1981</option>
-                            <option value="" class="quiz__birthOption">1982</option>
-                            <option value="" class="quiz__birthOption">1983</option>
-                            <option value="" class="quiz__birthOption">1984</option>
-                            <option value="" class="quiz__birthOption">1985</option>
-                            <option value="" class="quiz__birthOption">1986</option>
-                            <option value="" class="quiz__birthOption">1987</option>
-                            <option value="" class="quiz__birthOption">1988</option>
-                            <option value="" class="quiz__birthOption">1989</option>
-                            <option value="" class="quiz__birthOption">1990</option>
-                            <option value="" class="quiz__birthOption">1991</option>
-                            <option value="" class="quiz__birthOption">1992</option>
-                            <option value="" class="quiz__birthOption">1993</option>
-                            <option value="" class="quiz__birthOption">1994</option>
-                            <option value="" class="quiz__birthOption">1995</option>
-                            <option value="" class="quiz__birthOption">1996</option>
-                            <option value="" class="quiz__birthOption">1997</option>
-                            <option value="" class="quiz__birthOption">1998</option>
-                            <option value="" class="quiz__birthOption">1999</option>
-                            <option value="" class="quiz__birthOption">2000</option>
-                            <option value="" class="quiz__birthOption">2001</option>
-                            <option value="" class="quiz__birthOption">2002</option>
-                            <option value="" class="quiz__birthOption">2003</option>
-                            <option value="" class="quiz__birthOption">2004</option>
+                        <select name="select" class="quiz__years">
+                            <option value="null" class="quiz__year">Год</option>
+                            <option value="1980" class="quiz__year">1980</option>
+                            <option value="1981" class="quiz__year">1981</option>
+                            <option value="1982" class="quiz__year">1982</option>
+                            <option value="1983" class="quiz__year">1983</option>
+                            <option value="1984" class="quiz__year">1984</option>
+                            <option value="1985" class="quiz__year">1985</option>
+                            <option value="1986" class="quiz__year">1986</option>
+                            <option value="1987" class="quiz__year">1987</option>
+                            <option value="1988" class="quiz__year">1988</option>
+                            <option value="1989" class="quiz__year">1989</option>
+                            <option value="1990" class="quiz__year">1990</option>
+                            <option value="1991" class="quiz__year">1991</option>
+                            <option value="1992" class="quiz__year">1992</option>
+                            <option value="1993" class="quiz__year">1993</option>
+                            <option value="1994" class="quiz__year">1994</option>
+                            <option value="1995" class="quiz__year">1995</option>
+                            <option value="1996" class="quiz__year">1996</option>
+                            <option value="1997" class="quiz__year">1997</option>
+                            <option value="1998" class="quiz__year">1998</option>
+                            <option value="1999" class="quiz__year">1999</option>
+                            <option value="2000" class="quiz__year">2000</option>
+                            <option value="2001" class="quiz__year">2001</option>
+                            <option value="2002" class="quiz__year">2002</option>
+                            <option value="2003" class="quiz__year">2003</option>
+                            <option value="2004" class="quiz__year">2004</option>
                         </select>
+                        <p class="quiz__warning">Пожалуйста, выберите ответ</p>
                     </div>
-                    <button type="submit">ДАЛЕЕ</button>
                 </div>
+                <button type="button" class="quiz__button isActive">ДАЛЕЕ</button>
             </form>
         </div>
     </section>

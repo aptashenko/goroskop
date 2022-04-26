@@ -36,6 +36,8 @@
     &__background {
         background-image: url('../images/background.jpg');
         background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     &__title {
@@ -58,6 +60,7 @@
     }
 
     &__circle {
+        max-width: 315px;
         transition: all 20s linear;
         transform: rotate(0deg);
         animation: move 20s infinite linear;
@@ -83,6 +86,14 @@
 
     &__container {
         @extend %container;
+    }
+
+    &__question {
+        // display: none;
+    }
+
+    &__question.isActive {
+        display: block;
     }
 
     &__progress {
@@ -134,6 +145,16 @@
             left: 0;
             background-color: #B53E42;
         }
+
+        &--six::before {
+            content: '';
+            position: absolute;
+            height: 8px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-color: #B53E42;
+        }
     }
 
     &__title {
@@ -160,6 +181,11 @@
             flex-direction: column;
             padding-top: 45px;
             padding-bottom: 53px;
+        }
+
+        &--date {
+            flex-direction: column;
+            align-items: center;
         }
     }
 
@@ -218,7 +244,7 @@
     }
 
     &__button {
-        display: block;
+        display: none;
         margin-top: 15px;
         margin-left: auto;
         margin-right: auto;
@@ -237,14 +263,44 @@
             background-color: #355ADF;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
-
-        &--hidden {
-            display: none;
-        }
     }
+
+    &__days, &__monthes, &__years {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        position: relative;
+
+        margin-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 30px;
+        width: 186px;
+        height: 45px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.57;
+
+        border: 1px solid #E4E4E4;
+        background-image: url('../images/svg/arrow.svg');
+        background-repeat: no-repeat;
+        background-position: 161px;
+    }
+
+    &__day, &__month, &__year {
+        width: 186px;
+    }
+
+    &__warning {
+        
+    }
+
 }
 
 .footer {
+
     &__container {
         @extend %container;
     }
