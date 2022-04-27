@@ -4,9 +4,18 @@ const quizForm = document.querySelector('.quiz__form');
 const labelElems = document.querySelectorAll('.quiz__label');
 const buttonNext = document.querySelector('.quiz__button.isActive');
 const birthForm = document.querySelector('.quiz__answer--date');
+const resultBtn = document.querySelector('birthButton');
+const birthButton = document.createElement('button');
+birthButton.classList.add('quiz__button', 'birthButton');
+birthButton.setAttribute('type', 'button');
+birthButton.innerText = 'ДАЛЕЕ';
+birthButton.style.display = 'block';
+const finishBox = document.querySelector('.finish');
+
 
 let count = 0;
 
+console.log(birthButton);
 
 radioElems.forEach(el => el.addEventListener('input', color));
 
@@ -167,12 +176,6 @@ function getBirthInfo() {
     if (dayInput.value !== 'null' || monthInput.value !== 'null' || yearInput.value !== 'null') {
         warningEl.style.display = 'block';
     }
-
-    const birthButton = document.createElement('button');
-    birthButton.classList.add('quiz__button');
-    birthButton.setAttribute('type', 'button');
-    birthButton.innerText = 'ДАЛЕЕ';
-    birthButton.style.display = 'block';
     
     const selectBox = document.querySelector('.quiz__answer--date');
 
@@ -187,6 +190,51 @@ function getBirthInfo() {
         selectBox.append(birthButton);
     }
 }
+
+birthButton.addEventListener('click', showResult);
+
+function showResult(e) {
+    e.target.parentNode.parentNode.classList.remove('isActive');
+    finishBox.style.display = 'block';
+    progress();
+    setTimeout(getResult, 12000);
+}
+
+function progress() {
+    const progressLine = document.querySelector('.finish__progress--green');
+    const progressText = document.querySelectorAll('.finish__item');
+    
+    let width = 1;
+    let id = setInterval(progressStatus, 100);
+    function progressStatus() {
+        if (width >= 100) {
+            clearInterval(id);
+        } else {
+            width += 1;
+            progressLine.style.width = width + '%';
+            progressLine.innerHTML = width * 1 + '%';
+        }
+    }
+    
+    for (let i = 0; i <= progressText.length; i += 1) {
+    setTimeout(() => progressText[i].style.display='inline-block', 400 * (i + 1));
+    }
+
+    setTimeout(() => document.querySelector('.finish__text').style.display = 'inline-block', 10000);
+}
+
+function getResult() {
+    const lastPage = document.querySelectorAll('.finish__result');
+    lastPage.forEach(el => {
+        if (el.classList.contains('isActive')) {
+            el.classList.remove('isActive');
+        } else {
+            el.classList.add('isActive');
+        }
+    });
+}
+
+
 
 
 

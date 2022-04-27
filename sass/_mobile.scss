@@ -277,6 +277,30 @@
             background-color: #355ADF;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
+
+        &--active {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 0;
+            width: 100%;
+
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.57;
+            text-align: center;
+
+            &::before {
+                content: '';
+                display: inline-flex;
+                margin-right: 30px;
+                margin-left: 20px;
+                width: 27px;
+                height: 26px;
+                background-image: url('../images/svg/call.svg')
+            }
+        }
     }
 
     &__days, &__monthes, &__years {
@@ -333,12 +357,112 @@
 
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.finish {
+    display: none;
+    padding-top: 35px;
 
+    &__result {
+        display: none;
+
+        &.isActive {
+            display: block;
+        }
+    }
+
+    &__container {
+        @extend %container;
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.36;
+    }
+
+    &__progress {
+        margin-top: 20px;
+
+        width: 100%;
+        height: 42px;
+        background-color: #F3F4F8;
+
+        &--green {
+            display: flex;
+            height: 100%;
+            background-color: #419330;
+            width: 0;
+            color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.57;
+        }
+    }
+
+    &__list {
+        margin-top: 25px;
+
+        list-style: none;
+    }
+
+    &__item {
+        display: none;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 1.33;
+
+        &--green {
+            color: #419330;
+        }
+
+        &--red {
+            color: #D0060E;
+            font-weight: 700;
+            line-height: 4;
+        }
+    }
+
+    &__item:nth-last-child(n+2) {
+        padding-bottom: 15px;
+    }
+
+    &__text {
+        display: none;
+        margin-top: 30px;
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.33;
+    }
+
+    &__greets {
+        margin-top: 20px;
+
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.50;
+
+        &--blue {
+            color: $blueColor;
+            font-weight: 500;
+        }
+
+        &--bold {
+            display: block;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.05;
+        }
+    }
+}
+
+.footer {
     &__container {
         @extend %container;
     }
