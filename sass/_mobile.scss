@@ -8,6 +8,11 @@
         padding: 13px 20px;
     }
 
+    &__link {
+        text-decoration: none;
+        color: inherit;
+    }
+
     &__title {
         font-style: normal;
         font-weight: 700;
@@ -34,10 +39,7 @@
     }
 
     &__background {
-        background-image: url('../images/background.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        position: relative;
     }
 
     &__title {
@@ -60,10 +62,15 @@
     }
 
     &__circle {
-        max-width: 315px;
+        position: absolute;
+        width: 50%;
         transition: all 20s linear;
         transform: rotate(0deg);
         animation: move 20s infinite linear;
+    }
+
+    &__image {
+        width: 100%;
     }
 }
 
@@ -89,7 +96,7 @@
     }
 
     &__question {
-        // display: none;
+        display: none;
     }
 
     &__question.isActive {
@@ -184,7 +191,14 @@
         }
 
         &--date {
+            display: flex;
             flex-direction: column;
+            justify-content: space-around;
+            
+            padding-top: 25px;
+            padding-bottom: 25px;
+            
+            background-color: $grayColor;
             align-items: center;
         }
     }
@@ -294,12 +308,36 @@
     }
 
     &__warning {
-        
+        display: none;
+        margin-top: 23px;
+        padding: 7px 30px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 1.69;
+        color: #D0060E;
+        background-color: #FFD8CF;
+    }
+
+    &__zodiac {
+        display: none;
+    }
+
+    &__zodiacText {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 2.20;
+        text-align: center;
     }
 
 }
 
 .footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 
     &__container {
         @extend %container;

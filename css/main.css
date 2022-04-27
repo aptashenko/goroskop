@@ -139,6 +139,22 @@ summary {
   padding-right: 15px;
 }
 
+@media screen and (min-width: 375px) {
+  .header__container, .hero__container, .quiz__container, .footer__container {
+    max-width: 375px;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__container, .hero__container, .quiz__container, .footer__container {
+    max-width: 653px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -156,6 +172,11 @@ h1, h2, h3, p {
 
 .header__container {
   padding: 13px 20px;
+}
+
+.header__link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .header__title {
@@ -179,10 +200,7 @@ h1, h2, h3, p {
 }
 
 .hero__background {
-  background-image: url("../images/background.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
 }
 
 .hero__title {
@@ -203,13 +221,18 @@ h1, h2, h3, p {
 }
 
 .hero__circle {
-  max-width: 315px;
+  position: absolute;
+  width: 50%;
   -webkit-transition: all 20s linear;
   transition: all 20s linear;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-animation: move 20s infinite linear;
           animation: move 20s infinite linear;
+}
+
+.hero__image {
+  width: 100%;
 }
 
 @-webkit-keyframes move {
@@ -244,6 +267,10 @@ h1, h2, h3, p {
 
 .quiz {
   padding-top: 15px;
+}
+
+.quiz__question {
+  display: none;
 }
 
 .quiz__question.isActive {
@@ -343,10 +370,18 @@ h1, h2, h3, p {
 }
 
 .quiz__answer--date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #F3F4F8;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -451,6 +486,38 @@ h1, h2, h3, p {
 
 .quiz__day, .quiz__month, .quiz__year {
   width: 186px;
+}
+
+.quiz__warning {
+  display: none;
+  margin-top: 23px;
+  padding: 7px 30px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 1.69;
+  color: #D0060E;
+  background-color: #FFD8CF;
+}
+
+.quiz__zodiac {
+  display: none;
+}
+
+.quiz__zodiacText {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 2.20;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .footer__text {
