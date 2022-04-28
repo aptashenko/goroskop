@@ -133,14 +133,14 @@ summary {
   display: list-item;
 }
 
-.header__container, .hero__container, .quiz__container, .finish__container, .footer__container {
+.header__container, .hero__container, .quiz__container, .finish__container, .data__table, .footer__container {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 @media screen and (min-width: 375px) {
-  .header__container, .hero__container, .quiz__container, .finish__container, .footer__container {
+  .header__container, .hero__container, .quiz__container, .finish__container, .data__table, .footer__container {
     max-width: 375px;
     padding-left: 23px;
     padding-right: 23px;
@@ -148,7 +148,7 @@ summary {
 }
 
 @media screen and (min-width: 1200px) {
-  .header__container, .hero__container, .quiz__container, .finish__container, .footer__container {
+  .header__container, .hero__container, .quiz__container, .finish__container, .data__table, .footer__container {
     max-width: 653px;
     padding-left: 15px;
     padding-right: 15px;
@@ -268,10 +268,6 @@ h1, h2, h3, p, ul {
 
 .quiz {
   padding-top: 15px;
-}
-
-.quiz__question {
-  display: none;
 }
 
 .quiz__question.isActive {
@@ -466,17 +462,16 @@ h1, h2, h3, p, ul {
 }
 
 .quiz__button--active {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0;
-  margin-left: 50%;
+  margin-left: auto;
+  margin-right: auto;
   width: 288px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
@@ -550,12 +545,7 @@ h1, h2, h3, p, ul {
 }
 
 .finish {
-  display: none;
   padding-top: 35px;
-}
-
-.finish__result {
-  display: none;
 }
 
 .finish__result.isActive {
@@ -632,7 +622,6 @@ h1, h2, h3, p, ul {
 }
 
 .finish__text {
-  display: none;
   margin-top: 30px;
   font-style: normal;
   font-weight: 700;
@@ -660,8 +649,25 @@ h1, h2, h3, p, ul {
   line-height: 1.05;
 }
 
+.finish__table {
+  margin-top: 20px;
+}
+
+.data__table th {
+  padding: 15px 10px;
+  text-align: left;
+  color: #ffffff;
+  background-color: #315DFA;
+}
+
+.data__table td {
+  border: 1px solid #315DFA;
+  text-align: center;
+}
+
 .footer {
   position: absolute;
+  width: 100%;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);

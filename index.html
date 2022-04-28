@@ -21,7 +21,7 @@
             </a>
         </div>
     </header>
-        <main class="hero">
+        <main class="hero" hidden>
             <div class="hero__container">
                 <div class="hero__background">
                     <img src="./images/svg/zodiac_circle.svg" alt="Зодиакальный круг" class="hero__circle">
@@ -35,7 +35,7 @@
                     каждого из нас.</p>
             </div>
         </main>
-        <section class="quiz">
+        <section class="quiz" hidden>
             <div class="quiz__container">
                 <form action="" class="quiz__form" id="userdata">
                     <div class="quiz__question isActive">
@@ -104,7 +104,7 @@
                         <div class="quiz__progress quiz__progress--six"></div>
                         <p class="quiz__title">Введите дату своего рождения:</p>
                         <div class="quiz__answer--date">
-                            <select name="select" class="quiz__days">
+                            <select name="day" class="quiz__days">
                                 <option value="null" class="quiz__day">День</option>
                                 <option value="1" class="quiz__day">01</option>
                                 <option value="2" class="quiz__day">02</option>
@@ -138,7 +138,7 @@
                                 <option value="30" class="quiz__day">30</option>
                                 <option value="31" class="quiz__day">31</option>
                             </select>
-                            <select name="select" class="quiz__monthes">
+                            <select name="month" class="quiz__monthes">
                                 <option value="null" class="quiz__month">Месяц</option>
                                 <option value="1" class="quiz__month">01</option>
                                 <option value="2" class="quiz__month">02</option>
@@ -153,7 +153,7 @@
                                 <option value="11" class="quiz__month">11</option>
                                 <option value="12" class="quiz__month">12</option>
                             </select>
-                            <select name="select" class="quiz__years">
+                            <select name="year" class="quiz__years">
                                 <option value="null" class="quiz__year">Год</option>
                                 <option value="1980" class="quiz__year">1980</option>
                                 <option value="1981" class="quiz__year">1981</option>
@@ -256,8 +256,6 @@
                     </ul>
                     <p class="finish__text">ГОТОВО!</p>
                 </div>
-            </div>
-            <div class="finish__container">
                 <div class="finish__result">
                     <h3 class="finish__title">Спасибо за Ваши ответы!</h3>
                     <p class="finish__greets finish__greets--blue">Поздравляем! Прослушать свой персональный гороскоп возможно уже сейчас!</p>
@@ -265,7 +263,21 @@
                     17-18 ноября!</p>
                     <p class="finish__greets">Что бы прослушать аудио-сообщение, необходимо нажать на кнопку ниже и позвонить со своего мобильного телефона. Позвоните
                     и Прослушайте очень серьезную информацию!</p>
-                    <button type="submit" form="userdata" class="quiz__button quiz__button--active">Звонить и слушать</button>
+                    <button type="submit" id="quiz__submit" form="userdata" class="quiz__button quiz__button--active">Звонить и слушать</button>
+                </div>
+                <div class="finish__table">
+                    <table class="data__table">
+                        <thead>
+                            <tr><th>Пол</th><td>Мужчина</td></tr>
+                            <tr><th>Любимое время суток</th><td>День</td></tr>
+                            <tr><th>Наличие бессоницы</th><td>Нет</td></tr>
+                            <tr><th>Осуществляються ли планы</th><td>Да</td></tr>
+                            <tr><th>Цель на 5 лет</th><td>Карьера, рост, привет</td></tr>
+                            <tr><th>День рождения</th><td>11</td></tr>
+                            <tr><th>Месяц рождения</th><td>10</td></tr>
+                            <tr><th>Год рождения</th><td>1993</td></tr>
+                        </thead>
+                    </table>
                 </div>
             </div>
         </section>

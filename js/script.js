@@ -8,14 +8,14 @@ const resultBtn = document.querySelector('birthButton');
 const finishBox = document.querySelector('.finish');
 const birthButton = document.createElement('button');
 const footerEl = document.querySelector('.footer');
+const submitBtn = document.getElementById('userdata');
 birthButton.classList.add('quiz__button', 'birthButton');
 birthButton.setAttribute('type', 'button');
 birthButton.innerText = 'ДАЛЕЕ';
 birthButton.style.display = 'block';
 
 const footerPosition = document.body.clientHeight;
-footerEl.style.top = `${footerPosition+50}px`;
-
+footerEl.style.top = `${footerPosition + 50}px`;
 
 let count = 0;
 
@@ -42,6 +42,18 @@ buttonNext.addEventListener('click', function () {
 birthForm.addEventListener('input', getZodiacSign);
 
 birthButton.addEventListener('click', dataProcessing);
+
+submitBtn.addEventListener('submit', submitData);
+
+function submitData(ev) {
+    ev.preventDefault();
+
+    const formData = new FormData(ev.currentTarget);
+
+    formData.forEach((value, name) => {
+        console.table(`${name}: ${value}`);
+    });
+}
 
 function color(evt) {
     const checkedRadio = document.querySelector('.quiz__label--active');
