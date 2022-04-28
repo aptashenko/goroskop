@@ -45,15 +45,15 @@ birthButton.addEventListener('click', dataProcessing);
 
 submitBtn.addEventListener('submit', submitData);
 
-function submitData(ev) {
-    ev.preventDefault();
+// function submitData(ev) {
+//     ev.preventDefault();
 
-    const formData = new FormData(ev.currentTarget);
+//     const formData = new FormData(ev.currentTarget);
 
-    formData.forEach((value, name) => {
-        console.table(`${name}: ${value}`);
-    });
-}
+//     formData.forEach((value, name) => {
+//         console.table(`${name}: ${value}`);
+//     });
+// }
 
 function color(evt) {
     const checkedRadio = document.querySelector('.quiz__label--active');
