@@ -282,7 +282,10 @@
             display: inline-flex;
             align-items: center;
             padding: 10px 0;
-            width: 100%;
+            margin-left: 50%;
+            width: 288px;
+
+            transform: translateX(-50%);
 
             text-transform: uppercase;
             font-style: normal;
@@ -347,6 +350,10 @@
         display: none;
     }
 
+    &__zodiac.isActive {
+        display: block;
+    }
+
     &__zodiacText {
         font-style: normal;
         font-weight: 400;
@@ -371,6 +378,7 @@
 
     &__container {
         @extend %container;
+        margin: 0 auto;
     }
 
     &__title {
@@ -414,6 +422,10 @@
         font-weight: 300;
         font-size: 12px;
         line-height: 1.33;
+
+        &.isActive {
+            display: block;
+        }
 
         &--green {
             color: #419330;
@@ -463,13 +475,16 @@
 }
 
 .footer {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
     &__container {
         @extend %container;
     }
 
     &__text {
-        margin-top: 10px;
-
         font-style: normal;
         font-weight: 400;
         font-size: 10px;

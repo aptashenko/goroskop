@@ -473,7 +473,10 @@ h1, h2, h3, p, ul {
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 0;
-  width: 100%;
+  margin-left: 50%;
+  width: 288px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   text-transform: uppercase;
   font-style: normal;
   font-weight: 700;
@@ -534,6 +537,10 @@ h1, h2, h3, p, ul {
   display: none;
 }
 
+.quiz__zodiac.isActive {
+  display: block;
+}
+
 .quiz__zodiacText {
   font-style: normal;
   font-weight: 400;
@@ -553,6 +560,10 @@ h1, h2, h3, p, ul {
 
 .finish__result.isActive {
   display: block;
+}
+
+.finish__container {
+  margin: 0 auto;
 }
 
 .finish__title {
@@ -602,6 +613,10 @@ h1, h2, h3, p, ul {
   line-height: 1.33;
 }
 
+.finish__item.isActive {
+  display: block;
+}
+
 .finish__item--green {
   color: #419330;
 }
@@ -645,8 +660,14 @@ h1, h2, h3, p, ul {
   line-height: 1.05;
 }
 
+.footer {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .footer__text {
-  margin-top: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 10px;

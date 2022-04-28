@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +25,7 @@
             <div class="hero__container">
                 <div class="hero__background">
                     <img src="./images/svg/zodiac_circle.svg" alt="Зодиакальный круг" class="hero__circle">
-                    <img src="./images/background.jpg" alt="" class="hero__image">
+                    <img src="./images/background.jpg" alt="Женщина на фоне космоса" class="hero__image" width="100%">
                 </div>
                 <h2 class="hero__title">Узнайте, как 2021 год изменит жизнь каждого из нас!</h2>
                 <p class="hero__text">К сожалению, 2020 год принес нам немало неприятностей, даже откровенных проблем и
@@ -183,58 +183,58 @@
                             </select>
                             <p class="quiz__warning">Пожалуйста, выберите ответ</p>
                             <div class="quiz__images">
-                                <div class="quiz__zodiac quiz__zodiac--aqua">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/aquarius.svg" alt="Aquarius">
                                     <p class="quiz__zodiacText">Водолей</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--aries">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/aries.svg" alt="Aries">
                                     <p class="quiz__zodiacText">Овен</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--cancer">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/cancer_Rak.svg" alt="Cancer">
                                     <p class="quiz__zodiacText">Рак</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--capricorn">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/capricorn.svg" alt="Capricorn">
                                     <p class="quiz__zodiacText">Козерог</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--gemini">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/gemini.svg" alt="Gemini">
                                     <p class="quiz__zodiacText">Близнецы</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--lion">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/leo.svg" alt="Lion">
                                     <p class="quiz__zodiacText">Лев</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--libra">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/libra.svg" alt="Libra">
                                     <p class="quiz__zodiacText">Весы</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--prisces">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/pisces.svg" alt="Prisces">
                                     <p class="quiz__zodiacText">Рыбы</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--sagitt">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/sagittarius.svg" alt="Sagittarius">
                                     <p class="quiz__zodiacText">Стрелец</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--scorp">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/scorpio.svg" alt="Scorpio">
                                     <p class="quiz__zodiacText">Скорпион</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--taurus">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/taurus.svg" alt="Taurus">
                                     <p class="quiz__zodiacText">Телец</p>
                                 </div>
-                                <div class="quiz__zodiac quiz__zodiac--virgo">
+                                <div class="quiz__zodiac">
                                     <img src="./images/svg/virgo.svg" alt="Virgo">
                                     <p class="quiz__zodiacText">Дева</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button type="button" id="userdata" class="quiz__button isActive">ДАЛЕЕ</button>
+                    <button type="button" class="quiz__button isActive">ДАЛЕЕ</button>
                 </form>
             </div>
         </section>
@@ -246,16 +246,18 @@
                         <div class="finish__progress--green"></div>
                     </div>
                     <ul class="finish__list">
-                        <li class="finish__item">Анализ введенных данных . . . . . . . <span class="finish__item finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Коррекция астрологического знака . . . . . . . <span class="finish__item finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Расчет вариаций ответов . . . . . . . <span class="finish__item finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Генерация предсказания . . . . . . . <span class="finish__item finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Сохранение результата . . . . . . . <span class="finish__item finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Поиск свободного оператора . . . . . . . <span class="finish__item finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Начала озвучки и записи аудио-сообщения . . . . . . . <span class="finish__item finish__item--red">ИДЁТ ЗАПИСЬ!</span></li>
+                        <li class="finish__item">Анализ введенных данных . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Коррекция астрологического знака . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Расчет вариаций ответов . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Генерация предсказания . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Сохранение результата . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Поиск свободного оператора . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Начала озвучки и записи аудио-сообщения . . . . . . . <span class="finish__item finish__item--result finish__item--red">ИДЁТ ЗАПИСЬ!</span></li>
                     </ul>
                     <p class="finish__text">ГОТОВО!</p>
                 </div>
+            </div>
+            <div class="finish__container">
                 <div class="finish__result">
                     <h3 class="finish__title">Спасибо за Ваши ответы!</h3>
                     <p class="finish__greets finish__greets--blue">Поздравляем! Прослушать свой персональный гороскоп возможно уже сейчас!</p>
