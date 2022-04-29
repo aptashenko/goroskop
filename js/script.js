@@ -8,7 +8,7 @@ const resultBtn = document.querySelector('birthButton');
 const finishBox = document.querySelector('.finish');
 const birthButton = document.createElement('button');
 const footerEl = document.querySelector('.footer');
-const submitBtn = document.getElementById('userdata');
+const tableEl = document.querySelector('.table__head');
 birthButton.classList.add('quiz__button', 'birthButton');
 birthButton.setAttribute('type', 'button');
 birthButton.innerText = 'ДАЛЕЕ';
@@ -43,17 +43,35 @@ birthForm.addEventListener('input', getZodiacSign);
 
 birthButton.addEventListener('click', dataProcessing);
 
-submitBtn.addEventListener('submit', submitData);
+quizForm.addEventListener('submit', setData);
 
-// function submitData(ev) {
-//     ev.preventDefault();
 
-//     const formData = new FormData(ev.currentTarget);
+function setData(ev) {
+    ev.preventDefault();
 
-//     formData.forEach((value, name) => {
-//         console.table(`${name}: ${value}`);
-//     });
-// }
+    const tableHead = document.querySelector('.table__head');
+    
+    fetch('https://swapi.dev/api/people/1/').then(response => response.json()).then(person => {
+        tableEl.innerHTML = `<tr><th>Name</th><td>${person.name}</td></tr>
+        <tr><th>Height</th><td>${person.height}</td></tr>
+        <tr><th>Mass</th><td>${person.mass}</td></tr>
+        <tr><th>Hair color</th><td>${person.hair_color}</td></tr>
+        <tr><th>Skin color</th><td>${person.skin_color}</td></tr>
+        <tr><th>Eye color</th><td>${person.eye_color}</td></tr>
+        <tr><th>Birth year</th><td>${person.birth_year}</td></tr>
+        <tr><th>Gender</th><td>${person.gender}</td></tr>
+        <tr><th>Films</th><td>${person.films}</td></tr>
+        <tr><th>Vehicles</th><td>${person.vehicles}</td></tr>
+        <tr><th>Starships</th><td>${person.starships}</td></tr>
+        <tr><th>Created</th><td>${person.created}</td></tr>
+        <tr><th>Edited</th><td>${person.edited}</td></tr>
+        <tr><th>Url</th><td>${person.url}</td></tr>`;
+    });
+
+    fetch('https://swapi.dev/api/people/1/').then(response => response.json()).then(respone => respone.homeworld).then(planetUrl => fetch(planetUrl)).then(respone => respone.json()).then(planet => {
+        tableHead.insertAdjacentHTML('beforeend', `<tr><th>Homeworld</th><td>${planet.name}</td></tr>`);
+    });
+}
 
 function color(evt) {
     const checkedRadio = document.querySelector('.quiz__label--active');
