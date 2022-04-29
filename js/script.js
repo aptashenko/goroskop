@@ -45,12 +45,10 @@ birthButton.addEventListener('click', dataProcessing);
 
 quizForm.addEventListener('submit', setData);
 
-
 function setData(ev) {
     ev.preventDefault();
 
     const tableHead = document.querySelector('.table__head');
-    
     fetch('https://swapi.dev/api/people/1/').then(response => response.json()).then(person => {
         tableEl.innerHTML = `<tr><th>Name</th><td>${person.name}</td></tr>
         <tr><th>Height</th><td>${person.height}</td></tr>
@@ -60,17 +58,59 @@ function setData(ev) {
         <tr><th>Eye color</th><td>${person.eye_color}</td></tr>
         <tr><th>Birth year</th><td>${person.birth_year}</td></tr>
         <tr><th>Gender</th><td>${person.gender}</td></tr>
-        <tr><th>Films</th><td>${person.films}</td></tr>
-        <tr><th>Vehicles</th><td>${person.vehicles}</td></tr>
-        <tr><th>Starships</th><td>${person.starships}</td></tr>
         <tr><th>Created</th><td>${person.created}</td></tr>
         <tr><th>Edited</th><td>${person.edited}</td></tr>
         <tr><th>Url</th><td>${person.url}</td></tr>`;
+        getFilm(person.films);
+        getVehicle(person.vehicles);
+        getStarship(person.starships);
     });
+    footerEl.style.top = `${footerPosition + 700}px`;
+}
 
-    fetch('https://swapi.dev/api/people/1/').then(response => response.json()).then(respone => respone.homeworld).then(planetUrl => fetch(planetUrl)).then(respone => respone.json()).then(planet => {
-        tableHead.insertAdjacentHTML('beforeend', `<tr><th>Homeworld</th><td>${planet.name}</td></tr>`);
-    });
+function getFilm(arr) {
+    for(const url of arr) {
+    fetch(`${url}`)
+        .then(response => {
+            return response.json();
+        })
+        .then(el => {
+            return tableEl.insertAdjacentHTML('beforeend', `<tr><th>Films</th><td>${el.title}</td></tr>`);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
+}
+
+function getVehicle(arr) {
+    for(const url of arr) {
+    fetch(`${url}`)
+        .then(response => {
+            return response.json();
+        })
+        .then(el => {
+            return tableEl.insertAdjacentHTML('beforeend', `<tr><th>Vehicles</th><td>${el.name}</td></tr>`);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
+}
+
+function getStarship(arr) {
+    for(const url of arr) {
+    fetch(`${url}`)
+        .then(response => {
+            return response.json();
+        })
+        .then(el => {
+            return tableEl.insertAdjacentHTML('beforeend', `<tr><th>Starships</th><td>${el.name}</td></tr>`);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
 }
 
 function color(evt) {

@@ -96,7 +96,7 @@
     }
 
     &__question {
-        // display: none;
+        display: none;
     }
 
     &__question.isActive {
@@ -365,11 +365,11 @@
 }
 
 .finish {
-    // display: none;
+    display: none;
     padding-top: 35px;
 
     &__result {
-        // display: none;
+        display: none;
 
         &.isActive {
             display: block;
@@ -443,7 +443,7 @@
     }
 
     &__text {
-        // display: none;
+        display: none;
         margin-top: 30px;
 
         font-style: normal;
@@ -481,6 +481,7 @@
 .data {
     &__table {
         @extend %container;
+        width: 100%;
 
         & th {
             padding: 15px 10px;

@@ -270,6 +270,10 @@ h1, h2, h3, p, ul {
   padding-top: 15px;
 }
 
+.quiz__question {
+  display: none;
+}
+
 .quiz__question.isActive {
   display: block;
 }
@@ -545,7 +549,12 @@ h1, h2, h3, p, ul {
 }
 
 .finish {
+  display: none;
   padding-top: 35px;
+}
+
+.finish__result {
+  display: none;
 }
 
 .finish__result.isActive {
@@ -622,6 +631,7 @@ h1, h2, h3, p, ul {
 }
 
 .finish__text {
+  display: none;
   margin-top: 30px;
   font-style: normal;
   font-weight: 700;
@@ -651,6 +661,10 @@ h1, h2, h3, p, ul {
 
 .finish__table {
   margin-top: 20px;
+}
+
+.data__table {
+  width: 100%;
 }
 
 .data__table th {
