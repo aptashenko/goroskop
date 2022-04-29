@@ -117,7 +117,7 @@
             content: '';
             position: absolute;
             height: 8px;
-            width: 26px;
+            width: 10%;
             top: 0;
             left: 0;
             background-color: #B53E42;
@@ -127,7 +127,7 @@
             content: '';
             position: absolute;
             height: 8px;
-            width: 67px;
+            width: 25%;
             top: 0;
             left: 0;
             background-color: #B53E42;
@@ -137,7 +137,7 @@
             content: '';
             position: absolute;
             height: 8px;
-            width: 131px;
+            width: 50%;
             top: 0;
             left: 0;
             background-color: #B53E42;
@@ -147,7 +147,7 @@
             content: '';
             position: absolute;
             height: 8px;
-            width: 194px;
+            width: 70%;
             top: 0;
             left: 0;
             background-color: #B53E42;
@@ -472,16 +472,12 @@
             line-height: 1.05;
         }
     }
-
-    &__table {
-        margin-top: 20px;
-    }
 }
 
 .data {
+    margin-top: 20px;
+
     &__table {
-        @extend %container;
-        width: 100%;
 
         & th {
             padding: 15px 10px;
@@ -498,11 +494,6 @@
 }
 
 .footer {
-    position: absolute;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-
     &__container {
         @extend %container;
     }

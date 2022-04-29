@@ -7,15 +7,13 @@ const birthForm = document.querySelector('.quiz__answer--date');
 const resultBtn = document.querySelector('birthButton');
 const finishBox = document.querySelector('.finish');
 const birthButton = document.createElement('button');
-const footerEl = document.querySelector('.footer');
+
 const tableEl = document.querySelector('.table__head');
 birthButton.classList.add('quiz__button', 'birthButton');
 birthButton.setAttribute('type', 'button');
 birthButton.innerText = 'ДАЛЕЕ';
 birthButton.style.display = 'block';
 
-const footerPosition = document.body.clientHeight;
-footerEl.style.top = `${footerPosition + 50}px`;
 
 let count = 0;
 
@@ -48,7 +46,6 @@ quizForm.addEventListener('submit', setData);
 function setData(ev) {
     ev.preventDefault();
 
-    const tableHead = document.querySelector('.table__head');
     fetch('https://swapi.dev/api/people/1/').then(response => response.json()).then(person => {
         tableEl.innerHTML = `<tr><th>Name</th><td>${person.name}</td></tr>
         <tr><th>Height</th><td>${person.height}</td></tr>
@@ -65,7 +62,6 @@ function setData(ev) {
         getVehicle(person.vehicles);
         getStarship(person.starships);
     });
-    footerEl.style.top = `${footerPosition + 700}px`;
 }
 
 function getFilm(arr) {
@@ -127,7 +123,6 @@ function color(evt) {
 
     if (checkedLabel.classList.contains('quiz__label--active')) {
         buttonEl.style.display = 'block';
-        footerEl.style.top = `${footerPosition + 80}px`;
     }
 }
 

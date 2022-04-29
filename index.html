@@ -13,14 +13,15 @@
     <title>НОВЫЙ ГОРОСКОП НА 2021 ГОД!</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header__container">
-            <a href="#" class="header__link">
-                <h1 class="header__title">НОВЫЙ ГОРОСКОП НА 2021 ГОД!</h1>
-                <p class="header__subtitle">Узнайте, что Вас ждёт.</p>
-            </a>
-        </div>
-    </header>
+    <div class="page-wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="#" class="header__link">
+                    <h1 class="header__title">НОВЫЙ ГОРОСКОП НА 2021 ГОД!</h1>
+                    <p class="header__subtitle">Узнайте, что Вас ждёт.</p>
+                </a>
+            </div>
+        </header>
         <main class="hero">
             <div class="hero__container">
                 <div class="hero__background">
@@ -246,26 +247,37 @@
                         <div class="finish__progress--green"></div>
                     </div>
                     <ul class="finish__list">
-                        <li class="finish__item">Анализ введенных данных . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Коррекция астрологического знака . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Расчет вариаций ответов . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Генерация предсказания . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Сохранение результата . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Поиск свободного оператора . . . . . . . <span class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
-                        <li class="finish__item">Начала озвучки и записи аудио-сообщения . . . . . . . <span class="finish__item finish__item--result finish__item--red">ИДЁТ ЗАПИСЬ!</span></li>
+                        <li class="finish__item">Анализ введенных данных . . . . . . . <span
+                                class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Коррекция астрологического знака . . . . . . . <span
+                                class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Расчет вариаций ответов . . . . . . . <span
+                                class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Генерация предсказания . . . . . . . <span
+                                class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Сохранение результата . . . . . . . <span
+                                class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Поиск свободного оператора . . . . . . . <span
+                                class="finish__item finish__item--result finish__item--green">Выполнено!</span></li>
+                        <li class="finish__item">Начала озвучки и записи аудио-сообщения . . . . . . . <span
+                                class="finish__item finish__item--result finish__item--red">ИДЁТ ЗАПИСЬ!</span></li>
                     </ul>
                     <p class="finish__text">ГОТОВО!</p>
                 </div>
                 <div class="finish__result">
                     <h3 class="finish__title">Спасибо за Ваши ответы!</h3>
-                    <p class="finish__greets finish__greets--blue">Поздравляем! Прослушать свой персональный гороскоп возможно уже сейчас!</p>
-                    <p class="finish__greets"><span class="finish__greets--bold">2021 год Вас ошарашит!</span>Вас ждёт то, чего Вы никак не ожидали. Первые известия Вы получите совсем скоро, возможно это
-                    17-18 ноября!</p>
-                    <p class="finish__greets">Что бы прослушать аудио-сообщение, необходимо нажать на кнопку ниже и позвонить со своего мобильного телефона. Позвоните
-                    и Прослушайте очень серьезную информацию!</p>
-                    <button type="submit" id="quiz__submit" form="userdata" class="quiz__button quiz__button--active">Звонить и слушать</button>
+                    <p class="finish__greets finish__greets--blue">Поздравляем! Прослушать свой персональный гороскоп возможно
+                        уже сейчас!</p>
+                    <p class="finish__greets"><span class="finish__greets--bold">2021 год Вас ошарашит!</span>Вас ждёт то, чего
+                        Вы никак не ожидали. Первые известия Вы получите совсем скоро, возможно это
+                        17-18 ноября!</p>
+                    <p class="finish__greets">Что бы прослушать аудио-сообщение, необходимо нажать на кнопку ниже и позвонить со
+                        своего мобильного телефона. Позвоните
+                        и Прослушайте очень серьезную информацию!</p>
+                    <button type="submit" id="quiz__submit" form="userdata" class="quiz__button quiz__button--active">Звонить и
+                        слушать</button>
                 </div>
-                <div class="finish__table">
+                <div class="data">
                     <table class="data__table">
                         <thead class="table__head">
                         </thead>
@@ -273,11 +285,16 @@
                 </div>
             </div>
         </section>
-    <footer class="footer">
-        <div class="footer__container">
-            <p class="footer__text">2020 © horoscop personal</p>
+        <div class="page-buffer">
         </div>
-    </footer>
+    </div>
+    <div class="page-footer">
+        <footer class="footer">
+            <div class="footer__container">
+                <p class="footer__text">2020 © horoscop personal</p>
+            </div>
+        </footer>
+    </div>
     <script src="./js/script.js" type="module"></script>
 </body>
 </html>

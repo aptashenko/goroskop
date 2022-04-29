@@ -133,14 +133,14 @@ summary {
   display: list-item;
 }
 
-.header__container, .hero__container, .quiz__container, .finish__container, .data__table, .footer__container {
+.header__container, .hero__container, .quiz__container, .finish__container, .footer__container {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 @media screen and (min-width: 375px) {
-  .header__container, .hero__container, .quiz__container, .finish__container, .data__table, .footer__container {
+  .header__container, .hero__container, .quiz__container, .finish__container, .footer__container {
     max-width: 375px;
     padding-left: 23px;
     padding-right: 23px;
@@ -148,7 +148,7 @@ summary {
 }
 
 @media screen and (min-width: 1200px) {
-  .header__container, .hero__container, .quiz__container, .finish__container, .data__table, .footer__container {
+  .header__container, .hero__container, .quiz__container, .finish__container, .footer__container {
     max-width: 653px;
     padding-left: 15px;
     padding-right: 15px;
@@ -162,6 +162,26 @@ body {
 h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+* html .page-wrapper {
+  height: 100%;
+}
+
+.page-buffer {
+  height: 50px;
 }
 
 .header {
@@ -293,7 +313,7 @@ h1, h2, h3, p, ul {
   content: '';
   position: absolute;
   height: 8px;
-  width: 26px;
+  width: 10%;
   top: 0;
   left: 0;
   background-color: #B53E42;
@@ -303,7 +323,7 @@ h1, h2, h3, p, ul {
   content: '';
   position: absolute;
   height: 8px;
-  width: 67px;
+  width: 25%;
   top: 0;
   left: 0;
   background-color: #B53E42;
@@ -313,7 +333,7 @@ h1, h2, h3, p, ul {
   content: '';
   position: absolute;
   height: 8px;
-  width: 131px;
+  width: 50%;
   top: 0;
   left: 0;
   background-color: #B53E42;
@@ -323,7 +343,7 @@ h1, h2, h3, p, ul {
   content: '';
   position: absolute;
   height: 8px;
-  width: 194px;
+  width: 70%;
   top: 0;
   left: 0;
   background-color: #B53E42;
@@ -659,12 +679,8 @@ h1, h2, h3, p, ul {
   line-height: 1.05;
 }
 
-.finish__table {
+.data {
   margin-top: 20px;
-}
-
-.data__table {
-  width: 100%;
 }
 
 .data__table th {
@@ -677,14 +693,6 @@ h1, h2, h3, p, ul {
 .data__table td {
   border: 1px solid #315DFA;
   text-align: center;
-}
-
-.footer {
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .footer__text {
