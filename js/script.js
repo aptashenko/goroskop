@@ -417,8 +417,7 @@ function progress() {
         }
     }
     
-    for (let i = 0; i <= progressText.length; i += 1) {
-        
+    for (let i = 0; i <= progressText.length - 1; i += 1) {   
         setTimeout(() => progressText[i].classList.add('isActive'), 400 * (i + 1));
     }
 
