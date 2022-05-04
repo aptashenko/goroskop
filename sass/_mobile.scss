@@ -113,56 +113,18 @@
         background-color: #F3F4F8;
         box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 
-        &::before {
-            content: '';
-            position: absolute;
+        &--line {
             height: 8px;
+            background-color: #B53E42;
             width: 10%;
-            top: 0;
-            left: 0;
-            background-color: #B53E42;
         }
 
-        &--three::before {
-            content: '';
-            position: absolute;
+        &--lineend {
             height: 8px;
-            width: 25%;
-            top: 0;
-            left: 0;
             background-color: #B53E42;
-        }
-
-        &--four::before {
-            content: '';
-            position: absolute;
-            height: 8px;
-            width: 50%;
-            top: 0;
-            left: 0;
-            background-color: #B53E42;
-        }
-
-        &--five::before {
-            content: '';
-            position: absolute;
-            height: 8px;
-            width: 70%;
-            top: 0;
-            left: 0;
-            background-color: #B53E42;
-        }
-
-        &--six::before {
-            content: '';
-            position: absolute;
-            height: 8px;
             width: 100%;
-            top: 0;
-            left: 0;
-            background-color: #B53E42;
         }
-    }
+ }
 
     &__title {
         padding: 15px 22px;

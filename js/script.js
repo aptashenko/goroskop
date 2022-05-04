@@ -2,18 +2,66 @@ const radioElems = document.querySelectorAll('.quiz__answer');
 const mainEl = document.querySelector('.hero');
 const quizForm = document.querySelector('.quiz__form');
 const labelElems = document.querySelectorAll('.quiz__label');
+const activeLabel = document.querySelector('.quiz__label--active');
 const buttonNext = document.querySelector('.quiz__button.isActive');
 const birthForm = document.querySelector('.quiz__answer--date');
 const resultBtn = document.querySelector('birthButton');
 const finishBox = document.querySelector('.finish');
-const birthButton = document.createElement('button');
-
+const quizButton = document.querySelector('.quiz__button');
+const variableQuestion = document.querySelector('.quiz__title--variable');
+const variableAnswers = document.querySelector('.quiz__answer--column');
+const progressLine = document.querySelector('.quiz__progress--line');
+const submitBtn = document.querySelector('#quiz__submit');
 const tableEl = document.querySelector('.table__head');
+const buttonQuestion = document.createElement('button');
+buttonQuestion.classList.add('quiz__button');
+buttonQuestion.innerText = 'ДАЛЕЕ';
+quizForm.append(buttonQuestion);
+
+const birthButton = document.createElement('button');
 birthButton.classList.add('quiz__button', 'birthButton');
 birthButton.setAttribute('type', 'button');
 birthButton.innerText = 'ДАЛЕЕ';
 birthButton.style.display = 'block';
 
+let currentQuestionIndex = 0;
+
+const questions = [
+    {
+        question: 'В какое время суток Вы чувствуете себя наиболее комфортно?',
+        answers: [
+            { text: 'Утро' },
+            { text: 'Ночь' },
+            { text: 'Вечер' },
+            { text: 'День' },
+        ]
+    },
+    {
+        question: 'Подскажите, мучает ли Вас бессонница последнее время?',
+        answers: [
+            { text: 'Да' },
+            { text: 'Нет' },
+            { text: 'Иногда' },
+        ]
+    },
+    {
+        question: 'Чувствуете ли Вы в последнее время, что вам никак не удается осуществить ваши планы?',
+        answers: [
+            { text: 'Да' },
+            { text: 'Нет' },
+            { text: 'Иногда' },
+        ]
+    },
+    {
+        question: 'Какой Вы видите свою жизнь через 5 лет?',
+        answers: [
+            { text: 'Брак, семья, дети, дом' },
+            { text: 'Путешествия по Миру' },
+            { text: 'Успешная карьера' },
+            { text: 'Всё вместе' },
+        ]
+    }
+];
 
 let count = 0;
 
@@ -35,17 +83,47 @@ buttonNext.addEventListener('click', function () {
     }
 
     buttonEl.style.display = 'none';
+
+    setQuestions();
+});
+
+
+function setQuestions() {
+    variableQuestion.innerText = questions[currentQuestionIndex].question;
+    questions[currentQuestionIndex].answers.forEach(answer => {
+        const radioLabel = document.createElement('label');
+        radioLabel.classList.add('quiz__label');
+        radioLabel.classList.add('quiz__label--column');
+        radioLabel.innerHTML = `<input type="radio" name="radiobtn" class="quiz__input">${answer.text}`;
+        variableAnswers.append(radioLabel);
+    });
+}
+
+buttonQuestion.addEventListener('click', nextQuestion);
+
+function nextQuestion() {
+    currentQuestionIndex += 1;
+    progressLine.style.width = `${currentQuestionIndex*25}%`;
+    while (variableAnswers.firstChild) {
+    variableAnswers.removeChild(variableAnswers.firstChild);
+    }
+    setQuestions();
+    if (!activeLabel) {
+        buttonQuestion.style.display = 'none';
+    }
+}
+
+quizForm.addEventListener('submit', (ev) => {
+    ev.preventDefault();
 });
 
 birthForm.addEventListener('input', getZodiacSign);
 
 birthButton.addEventListener('click', dataProcessing);
 
-quizForm.addEventListener('submit', setData);
+submitBtn.addEventListener('click', setData);
 
-function setData(ev) {
-    ev.preventDefault();
-
+function setData() {
     fetch('https://swapi.dev/api/people/1/').then(response => response.json()).then(person => {
         tableEl.innerHTML = `<tr><th>Name</th><td>${person.name}</td></tr>
         <tr><th>Height</th><td>${person.height}</td></tr>
@@ -121,8 +199,17 @@ function color(evt) {
 
     checkedLabel.classList.add('quiz__label--active');
 
-    if (checkedLabel.classList.contains('quiz__label--active')) {
+    if (checkedLabel.classList.contains('quiz__label--column')) {
+        buttonQuestion.style.display = 'block';
+    }
+
+    if (!checkedLabel.classList.contains('quiz__label--column')) {
         buttonEl.style.display = 'block';
+    }
+
+    if (currentQuestionIndex + 1 >= questions.length) {
+        buttonQuestion.style.display = 'none';
+        buttonNext.style.display = 'block';
     }
 }
 
@@ -436,8 +523,3 @@ function showResult() {
         }
     });
 }
-
-
-
-
-
